@@ -38,7 +38,7 @@ LightBoxと組み合わせて使うとこんな感じ(<http://instagram.com/p/eF
 ## 参考にした情報
 「iPadと外部スイッチを使った「ささやかな」実験」
 iPadに外部スイッチを付けて肢体不自由のあるユーザが使えるようにするための様々な試み．スイッチに対応したアプリが受付けるキーコードの情報が便利．		
-<http://www.geocities.jp/jalpsjp/ipad/ipad.html>
+<http://www.geocities.jp/jalpsjp/>
 
 「ArduinoUNO+USBHostShield+Bluetoothドングルで、iPadにつながるインプットデバイスを作る」
 このプログラムを書くきっかけ．
