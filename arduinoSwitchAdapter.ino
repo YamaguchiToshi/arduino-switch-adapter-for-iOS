@@ -1,7 +1,6 @@
-
 #include <BTHID.h>
 
-#define SW 6
+#define SW 6  // スイッチを接続するポート
 
 USB Usb;
 BTD Btd(&Usb);
@@ -14,11 +13,11 @@ int state = 0;
 void setup() {
   Serial.begin(115200);
   if (Usb.Init() == -1) {
-    Serial.print(F("OSC did not start"));
+    Serial.print(F("OSC did not start\n"));
     while(1); //halt
   }
-  Serial.print(F("\r\nBluetooth HID"));
-  Btd.btdName = "ASA";  // Set device name
+  Serial.print(F("Bluetooth HID\n"));
+  Btd.btdName = "Arduino Switch Adapter";
 }
   
 void loop() {
@@ -29,9 +28,10 @@ void loop() {
     state = 1 - state;
     delay(10);
   }
+
   old_val = val;
   if( state == 1 ){
-    bthid.HID_SendCharacter(0x20);   
+    bthid.HID_SendCharacter(0x20);  // "Space" のキーコードを送信する
     state = 0; 
   }
 
